@@ -23,14 +23,17 @@ Use Canadian retailer sites only: thebrick.com, ikea.com/ca/en, structube.com/en
 
 Also download the main product image (the og:image meta tag works well) into ./products/.
 
-Starting candidates to verify:
-- The Brick Sawyer 79" linen-look sofa (~$699.95)
-- The Brick Tula 88" rolled-arm fabric sofa (~$799.95)
-- Structube KINSEY velvet 3-seater (~$799, sale from $999): https://www.structube.com/en_ca/kinsey-velvet-3seater-sofa-45-38-25
-- IKEA UPPLAND sofa (beige ~$739 on sale until Nov 24, 2026)
-- IKEA KIVIK sofa, Tibbleby beige/grey (~$749). Note it's about 90" wide.
-- Costco Thomasville fabric sofa (~$799.99): https://www.costco.ca/thomasville-fabric-sofa.product.4000294085.html
-- Stretch: Article Ceni 83" in Hemlock Green (~$1,099): https://www.article.com/pla/25355/ceni-83-sofa-hemlock-green
+Starting candidates. These product URLs were found through search, but the prices may have changed, so re-check each one:
+- IKEA UPPLAND sofa, Kilanda light beige, 88", ~$749: https://www.ikea.com/ca/en/p/uppland-sofa-kilanda-light-beige-s59442483/
+- IKEA SALTSJÖBADEN sofa, Fridtuna light beige, ~81", ~$649 (confirm the colour, since one listing says light grey): https://www.ikea.com/ca/en/p/saltsjoebaden-sofa-fridtuna-light-beige-s59599935/
+- IKEA KIVIK sofa, Tresund light beige, ~90", ~$899 (a bit wide for the lamp gap): https://www.ikea.com/ca/en/p/kivik-sofa-tresund-light-beige-s29482833/
+- Structube TERESA 3-seater, 84", ~$749–799. Pick the Cream or Green colour on the page: https://www.structube.com/en_ca/teresa-contemporary-3seater-sofa-31-76-64
+- The Brick Scarlett 87" chenille sofa with rolled arms, ecru beige, ~$899.95–1,199.98. This is the best style match, but it may no longer be available online: https://www.thebrick.com/products/scarlett-chenille-sofa-ecru
+- Leon's Madrid sofa, beige, 84", ~$649 (arm style unknown): https://www.leons.ca/products/madrid-sofa-beige
+- Stretch: Article Ceni 83" in Hemlock Green (~$1,099): https://www.article.com/product/25355/ceni-83-sofa-hemlock-green
+- Stretch: Leon's Brooklyn sofa, green corduroy with rolled arms and nailheads, 85", $999–1,499 depending on the page: https://www.leons.ca/products/brooklyn-sofa-green
+- Stretch: The Brick Sofa Lab Roll sofa in Luxury Sand (~$1,125; order the two-arm sofa, not the LAF or RAF piece): https://www.thebrick.com/products/sofa-lab-roll-sofa-luxury-sand
+- Skip these: Structube KINSEY (it's $999 and blue), The Brick Sawyer (grey only) and The Brick Tula (Mist blue or Steel grey only).
 
 Also look for more formal-cozy options, such as IKEA ESSEBODA, LINANÄS or EKTORP, rolled-arm or Chesterfield-style sofas at Structube, The Brick, Leon's or Wayfair.ca, and tufted velvet sofas in green or cognac. Drop anything out of stock, discontinued or over budget.
 
