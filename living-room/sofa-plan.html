@@ -1,0 +1,407 @@
+<title>Fireplace Room Sofa Plan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; floor plans drawn to scale (1 unit = 1 ft) beside their notes; shortlist as a scannable list. */
+:root{
+  --bg:#f2f3ee;          /* warm white walls */
+  --panel:#fbfbf8;
+  --fg:#1d2420;
+  --muted:#5d665f;
+  --line:#d6d9cf;
+  --accent:#2f5b45;      /* fiddle-leaf green */
+  --accent-soft:#dbe7df;
+  --wood:#7a4b2f;        /* coffee table walnut */
+  --floor:#efe3c9;       /* maple floor */
+  --rug:#c9c9c4;
+  --plant:#7fa58c;
+  --chair:#b9bcb6;
+  --wicker:#cdbd9c;
+  --sale:#9a3b1f;
+  --font-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --font-body:"Figtree",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141915;--panel:#1b211d;--fg:#e6e9e2;--muted:#a1aaa2;--line:#2f3832;
+    --accent:#86c09c;--accent-soft:#233229;--wood:#a46c48;--floor:#2a2720;--rug:#4a4c4a;
+    --plant:#4f7a5f;--chair:#6d716c;--wicker:#7d6f55;--sale:#e9896a;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141915;--panel:#1b211d;--fg:#e6e9e2;--muted:#a1aaa2;--line:#2f3832;
+  --accent:#86c09c;--accent-soft:#233229;--wood:#a46c48;--floor:#2a2720;--rug:#4a4c4a;
+  --plant:#4f7a5f;--chair:#6d716c;--wicker:#7d6f55;--sale:#e9896a;color-scheme:dark;
+}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(2rem,5vw,3rem);font-weight:700;letter-spacing:-.01em}
+h2{font-size:1.6rem;font-weight:700}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0;max-width:66ch}
+a{color:var(--accent);text-underline-offset:2px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+.eyebrow{font-family:var(--font-mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+section{display:flex;flex-direction:column;gap:20px}
+header{display:flex;flex-direction:column;gap:14px}
+.lede{font-size:1.1rem;color:var(--muted)}
+.budget{display:inline-flex;gap:10px;align-items:baseline;flex-wrap:wrap;background:var(--accent-soft);padding:10px 14px;border-radius:8px;width:fit-content}
+.budget b{font-family:var(--font-mono);font-size:1.05rem;color:var(--accent)}
+
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 28px;margin:0;padding:0;list-style:none}
+.facts li{border-top:1px solid var(--line);padding-top:10px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.facts strong{font-family:var(--font-display);font-weight:500;font-size:1.02rem}
+.facts span{color:var(--muted);font-size:.95rem}
+
+.measure{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.measure div{border:1px dashed var(--line);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.measure .mono{color:var(--accent);font-size:.9rem}
+
+.layout{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:28px;align-items:start;border-top:1px solid var(--line);padding-top:28px}
+.layout:first-of-type{border-top:0;padding-top:0}
+@media (max-width:760px){.layout{grid-template-columns:1fr}}
+.plan{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px;overflow-x:auto}
+.plan svg{display:block;width:100%;height:auto;max-width:100%}
+.notes{display:flex;flex-direction:column;gap:14px;min-width:0}
+.tag{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--accent);color:var(--bg);width:fit-content}
+.tag.alt{background:transparent;color:var(--muted);border:1px solid var(--line)}
+.pc{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:480px){.pc{grid-template-columns:1fr}}
+.pc ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:.95rem}
+.pc h4{margin:0 0 4px;font-size:.78rem;font-family:var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.pick{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;border-top:1px solid var(--line);padding-top:12px}
+.pick .mono{color:var(--accent);font-weight:500;overflow-wrap:anywhere}
+
+.list{display:flex;flex-direction:column}
+.row{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) 120px;gap:8px 24px;padding:18px 0;border-top:1px solid var(--line);align-items:start}
+.row:last-child{border-bottom:1px solid var(--line)}
+@media (max-width:680px){.row{grid-template-columns:1fr}}
+.row .name{display:flex;flex-direction:column;gap:4px;min-width:0}
+.row .name h3{font-size:1.08rem}
+.row .where{font-size:.92rem;color:var(--muted)}
+.row .meta{display:flex;flex-direction:column;gap:4px;font-size:.92rem;min-width:0}
+.row .price{text-align:right;display:flex;flex-direction:column;gap:2px}
+@media (max-width:680px){.row .price{text-align:left}}
+.row .price b{font-family:var(--font-mono);font-size:1.15rem;font-variant-numeric:tabular-nums}
+.row .price s{font-family:var(--font-mono);color:var(--muted);font-size:.85rem}
+.row .price em{font-style:normal;font-size:.78rem;color:var(--sale);font-family:var(--font-mono)}
+.fits{display:flex;gap:6px;flex-wrap:wrap}
+.fits span{font-family:var(--font-mono);font-size:.72rem;border:1px solid var(--line);border-radius:4px;padding:1px 6px;color:var(--muted)}
+.fits span.yes{border-color:var(--accent);color:var(--accent)}
+.group-label{margin-top:18px}
+
+.swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.sw{display:flex;gap:12px;align-items:flex-start;min-width:0}
+.sw i{flex:none;width:44px;height:44px;border-radius:8px;border:1px solid var(--line)}
+.sw div{display:flex;flex-direction:column;gap:2px;min-width:0}
+.sw span{color:var(--muted);font-size:.92rem}
+.foot{font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;display:flex;flex-direction:column;gap:8px}
+
+/* plan drawing */
+.p-floor{fill:var(--floor)}
+.p-wall{stroke:var(--fg);stroke-width:.22;fill:none;stroke-linecap:square}
+.p-open{stroke:var(--muted);stroke-width:.08;stroke-dasharray:.35 .3;fill:none}
+.p-window{stroke:var(--accent);stroke-width:.32}
+.p-fire{fill:var(--wood);opacity:.85}
+.p-hearth{fill:var(--panel);stroke:var(--fg);stroke-width:.06}
+.p-plant{fill:var(--plant);opacity:.55}
+.p-rug{fill:var(--rug);opacity:.75}
+.p-rug-new{fill:var(--rug);opacity:.75;stroke:var(--muted);stroke-width:.06;stroke-dasharray:.25 .2}
+.p-table{fill:var(--wood)}
+.p-sofa{fill:var(--accent)}
+.p-sofa-back{fill:var(--accent);filter:brightness(.8)}
+.p-chair{fill:var(--chair)}
+.p-wicker{fill:var(--wicker)}
+.p-back{fill:var(--fg);opacity:.35}
+.p-lamp{fill:var(--panel);stroke:var(--fg);stroke-width:.07}
+.p-pillar{fill:var(--fg)}
+.p-console{fill:none;stroke:var(--wood);stroke-width:.1;stroke-dasharray:.25 .18}
+.p-walk{stroke:var(--sale);stroke-width:.09;fill:none;stroke-dasharray:.3 .25;marker-end:url(#arr)}
+.p-arrowhead{fill:var(--sale)}
+.p-label{font-family:var(--font-mono);font-size:.5px;fill:var(--muted)}
+.p-label-in{font-family:var(--font-mono);font-size:.46px;fill:var(--fg)}
+.p-label-sofa{font-family:var(--font-mono);font-size:.5px;fill:var(--bg);font-weight:500}
+.p-dim{font-family:var(--font-mono);font-size:.45px;fill:var(--muted)}
+.p-dimline{stroke:var(--muted);stroke-width:.04}
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Living room · Surrey, BC · checked Nov 8, 2026</span>
+    <h1>Fireplace Room Sofa Plan</h1>
+    <p class="lede">Your room already has a strong base: the fireplace wall, a window full of plants, and two tall lamps on the long wall that look like they're waiting for a sofa to stand between them. These are three ways to lay it out, plus sofas you can get near Surrey without overspending.</p>
+    <div class="budget"><span>Target for the sofa</span><b>≤ $800 CAD</b><span>Most picks are $599–$800. One stretch pick and a used-market route are included too.</span></div>
+  </header>
+
+  <section>
+    <span class="eyebrow">What I read from your photos</span>
+    <ul class="facts">
+      <li><strong>Fireplace wall</strong><span>Tiled gas fireplace inside white panelled millwork with an arched niche. This is the focal point.</span></li>
+      <li><strong>Window wall</strong><span>A tall window with a fiddle-leaf fig, monstera, dracaena and a row of potted plants. Don't block it.</span></li>
+      <li><strong>Long blank wall</strong><span>Two lamps on iron stands, with the grey velvet chairs, side table and a monstera between them.</span></li>
+      <li><strong>Open side</strong><span>Opens to the front entry and hallway beside the white pillar, so people walk through here.</span></li>
+      <li><strong>What's already grey</strong><span>The shag rug, velvet chairs, wicker chairs and floor cushions are all grey. A warm or green sofa will balance them better than another grey one.</span></li>
+      <li><strong>Small rug</strong><span>The current rug is about 5×8 ft. It floats in the middle. An 8×10 would pull the seating together (optional).</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="eyebrow">Measure these two things before you buy</span>
+    <div class="measure">
+      <div><strong>1. Gap between the two lamp stands</strong><span>My estimate from the photos is about 8 ft. A sofa needs about 6 in of space on each side.</span><span class="mono">8 ft gap → sofa up to ~85 in</span></div>
+      <div><strong>2. Fireplace wall to the entry edge</strong><span>This sets whether a sofa can float facing the fire and still leave a walkway behind it.</span><span class="mono">need ≥ 16 ft for Layout B</span></div>
+    </div>
+    <p style="color:var(--muted);font-size:.92rem">The plans below assume a room of about 14 × 17 ft, estimated from the photos. They're drawn to that scale.</p>
+  </section>
+
+  <section id="layouts">
+    <h2>Three layouts</h2>
+    <div class="layout">
+      <div class="plan" id="plan-a" role="img" aria-label="Layout A floor plan: sofa against the lamp wall"></div>
+      <div class="notes">
+        <span class="tag">Recommended</span>
+        <h3>A · Sofa between the lamps</h3>
+        <p>Put the sofa on the long blank wall, centred between the two lamp stands. The stands become your end tables. The wicker chairs face it from the plant side, and the velvet chairs close the group at the entry end.</p>
+        <div class="pc">
+          <div><h4>Good</h4><ul><li>Lamps and outlets are already there</li><li>Window and plants stay open</li><li>Walkway from the entry stays clear</li><li>Uses every chair you own</li></ul></div>
+          <div><h4>Watch</h4><ul><li>Sofa sits side-on to the fireplace</li><li>Sofa must fit the lamp gap (≤ ~85 in)</li><li>Monstera moves to a corner</li></ul></div>
+        </div>
+        <div class="pick"><span>Best size: <b>79–85 in</b>, not too deep</span><span class="mono">Brick Sawyer · IKEA Uppland</span></div>
+      </div>
+    </div>
+
+    <div class="layout">
+      <div class="plan" id="plan-b" role="img" aria-label="Layout B floor plan: sofa floating and facing the fireplace"></div>
+      <div class="notes">
+        <span class="tag alt">Most cozy</span>
+        <h3>B · Facing the fire</h3>
+        <p>Float the sofa in the middle of the room, facing the fireplace with its back to the entry. Chairs face each other in pairs on either side. This is the classic fireplace layout, and the sofa back acts as a soft wall between the room and the hallway.</p>
+        <div class="pc">
+          <div><h4>Good</h4><ul><li>Everyone faces the fireplace</li><li>Makes the room feel separate from the entry</li><li>A longer, deeper sofa fits here</li></ul></div>
+          <div><h4>Watch</h4><ul><li>Needs about 3 ft of walkway behind the sofa</li><li>Sofa back is on show (pick one finished on all sides)</li><li>A lamp or plant has to move behind it</li></ul></div>
+        </div>
+        <div class="pick"><span>Best size: <b>84–90 in</b>, deep seat</span><span class="mono">IKEA Kivik · Brick Tula</span></div>
+      </div>
+    </div>
+
+    <div class="layout">
+      <div class="plan" id="plan-c" role="img" aria-label="Layout C floor plan: loveseat on the lamp wall with a tea nook by the window"></div>
+      <div class="notes">
+        <span class="tag alt">Lowest cost</span>
+        <h3>C · Loveseat and a plant nook</h3>
+        <p>A loveseat goes between the lamps and the velvet chairs face it across the coffee table. The wicker chairs and a small round table move into the corner by the window to make a tea and reading nook among the plants. Your current rug still works here.</p>
+        <div class="pc">
+          <div><h4>Good</h4><ul><li>Cheapest: a loveseat is about $600</li><li>Keeps the current rug</li><li>Gives the plant corner a purpose</li></ul></div>
+          <div><h4>Watch</h4><ul><li>Seats 2 on the sofa (6 in total)</li><li>Not ideal for lying down</li></ul></div>
+        </div>
+        <div class="pick"><span>Best size: <b>60–70 in</b> loveseat</span><span class="mono">IKEA Uppland loveseat</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sofas">
+    <h2>Sofa shortlist</h2>
+    <p>Prices are in CAD as listed on Nov 8, 2026. Sales change often, so confirm on the store page before you go.</p>
+
+    <span class="eyebrow group-label">Under $800, near Surrey</span>
+    <div class="list">
+      <div class="row">
+        <div class="name"><h3><a href="https://www.thebrick.com/collections/big-sofa-sale" target="_blank" rel="noopener">The Brick · Sawyer 79″ linen-look sofa</a></h3><span class="where">The Brick Surrey (King George Blvd). Made in Canada. Can be picked up the same day if it's in stock.</span></div>
+        <div class="meta"><span>Compact 79″ with reversible cushions. It fits between the lamps with room to spare.</span><div class="fits"><span class="yes">Layout A</span><span>B</span><span>C</span></div></div>
+        <div class="price"><b>$699.95</b><span class="where">from</span></div>
+      </div>
+      <div class="row">
+        <div class="name"><h3><a href="https://www.ikea.com/ca/en/cat/sofas-fu003/" target="_blank" rel="noopener">IKEA · UPPLAND sofa</a></h3><span class="where">IKEA Coquitlam or Richmond. Delivers to Surrey.</span></div>
+        <div class="meta"><span>About 85″ wide with washable slipcovers. Choose a beige cover to warm up the grey.</span><div class="fits"><span class="yes">Layout A</span><span class="yes">B</span><span>C</span></div></div>
+        <div class="price"><b>$699–739</b><s>beige reg. $899</s><em>beige sale to Nov 24</em></div>
+      </div>
+      <div class="row">
+        <div class="name"><h3><a href="https://www.ikea.com/ca/en/cat/sofas-fu003/" target="_blank" rel="noopener">IKEA · KIVIK sofa, Tibbleby beige/grey</a></h3><span class="where">IKEA Coquitlam or Richmond.</span></div>
+        <div class="meta"><span>About 90″ wide with a deep, soft seat and a washable cover. It's the comfiest option for floating in Layout B, but too long for the lamp gap.</span><div class="fits"><span>A</span><span class="yes">Layout B</span><span>C</span></div></div>
+        <div class="price"><b>$749</b></div>
+      </div>
+      <div class="row">
+        <div class="name"><h3><a href="https://www.structube.com/en_ca/kinsey-velvet-3seater-sofa-45-38-25" target="_blank" rel="noopener">Structube · KINSEY velvet 3-seater</a></h3><span class="where">Structube Langley (about 20 min away). Also sold online.</span></div>
+        <div class="meta"><span>Mid-century, in velvet that matches your velvet chairs. Pick a non-grey colour.</span><div class="fits"><span class="yes">Layout A</span><span class="yes">B</span><span>C</span></div></div>
+        <div class="price"><b>$799</b><s>$999</s><em>on sale</em></div>
+      </div>
+      <div class="row">
+        <div class="name"><h3><a href="https://www.thebrick.com/collections/sofas-and-sectionals" target="_blank" rel="noopener">The Brick · Tula 88″ rolled-arm sofa</a></h3><span class="where">The Brick Surrey. Made in Canada.</span></div>
+        <div class="meta"><span>Rolled arms suit the traditional lamps and millwork. It's steel grey, so pair it with warm pillows.</span><div class="fits"><span>A</span><span class="yes">Layout B</span><span>C</span></div></div>
+        <div class="price"><b>$799.95</b></div>
+      </div>
+      <div class="row">
+        <div class="name"><h3><a href="https://www.costco.ca/thomasville-fabric-sofa.product.4000294085.html" target="_blank" rel="noopener">Costco · Thomasville fabric sofa</a></h3><span class="where">Costco.ca (Surrey and Langley warehouses). Membership needed.</span></div>
+        <div class="meta"><span>Pocket-coil seat cushions. The listing may be out of date, so check the price and colours.</span><div class="fits"><span class="yes">Layout A</span><span class="yes">B</span><span>C</span></div></div>
+        <div class="price"><b>$799.99</b><s>$1,199.99</s></div>
+      </div>
+    </div>
+
+    <span class="eyebrow group-label">Loveseats for Layout C</span>
+    <div class="list">
+      <div class="row">
+        <div class="name"><h3><a href="https://www.ikea.com/ca/en/cat/loveseats-two-seater-sofas-10668/" target="_blank" rel="noopener">IKEA · UPPLAND loveseat, Kilanda light beige</a></h3><span class="where">IKEA Coquitlam or Richmond.</span></div>
+        <div class="meta"><span>The light beige works well against the grey rug and the dark coffee table.</span><div class="fits"><span>A</span><span>B</span><span class="yes">Layout C</span></div></div>
+        <div class="price"><b>$599</b></div>
+      </div>
+      <div class="row">
+        <div class="name"><h3><a href="https://www.ikea.com/ca/en/cat/loveseats-two-seater-sofas-10668/" target="_blank" rel="noopener">IKEA · KIVIK loveseat, Tibbleby beige/grey</a></h3><span class="where">IKEA Coquitlam or Richmond.</span></div>
+        <div class="meta"><span>A deeper, softer seat than the Uppland.</span><div class="fits"><span>A</span><span>B</span><span class="yes">Layout C</span></div></div>
+        <div class="price"><b>$699</b></div>
+      </div>
+    </div>
+
+    <span class="eyebrow group-label">Stretch and second-hand</span>
+    <div class="list">
+      <div class="row">
+        <div class="name"><h3><a href="https://www.article.com/pla/25355/ceni-83-sofa-hemlock-green" target="_blank" rel="noopener">Article · Ceni 83″ sofa, Hemlock Green</a></h3><span class="where">Article is based in Vancouver and ships to your door.</span></div>
+        <div class="meta"><span>The green picks up all your plants and it fits the lamp gap. It's over budget, but it's the best match for this room's style.</span><div class="fits"><span class="yes">Layout A</span><span class="yes">B</span><span>C</span></div></div>
+        <div class="price"><b>$1,099</b><em>over budget</em></div>
+      </div>
+      <div class="row">
+        <div class="name"><h3><a href="https://www.facebook.com/marketplace/surrey/search?query=structube%20sofa" target="_blank" rel="noopener">Used: Facebook Marketplace and Kijiji, Surrey and Langley</a></h3><span class="where">Search "Structube Loretta", "Structube Kinsey", "Article Ceni" and "Article Timber".</span></div>
+        <div class="meta"><span>Recent sales: Structube velvet 3-seaters went for $180–$500. <a href="https://recertifiedfurniture.ca/products/article-ceni-sofa" target="_blank" rel="noopener">Used Article Ceni</a> sells for about $695 and <a href="https://recertifiedfurniture.ca/products/article-timber-sofa" target="_blank" rel="noopener">used Timber</a> for about $605.</span><div class="fits"><span class="yes">A</span><span class="yes">B</span><span class="yes">C</span></div></div>
+        <div class="price"><b>$180–700</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Colour to choose</h2>
+    <p>The room already has grey in the rug, chairs and cushions, plus dark walnut and a lot of green. A sofa in one of these colours will tie it together instead of adding more grey.</p>
+    <div class="swatches">
+      <div class="sw"><i style="background:#d9cdb5"></i><div><strong>Oatmeal / light beige</strong><span>The safest choice. It brightens the room and makes the walnut table stand out. Uppland, Kivik.</span></div></div>
+      <div class="sw"><i style="background:#3f5a46"></i><div><strong>Deep green</strong><span>Echoes the fig and monstera. It's bold, and it hides wear well. Ceni, Kinsey.</span></div></div>
+      <div class="sw"><i style="background:#9a5a32"></i><div><strong>Cognac / rust</strong><span>Matches the copper fireplace tile and the Moroccan lanterns. A warm, cozy option.</span></div></div>
+      <div class="sw"><i style="background:#7c7f7d"></i><div><strong>Grey (use with care)</strong><span>Only choose grey if you add warm pillows and throws. Otherwise the room starts to look flat.</span></div></div>
+    </div>
+  </section>
+
+  <div class="foot">
+    <span>Store details: The Brick Surrey, King George Blvd · IKEA Coquitlam, 1000 Lougheed Hwy · IKEA Richmond, 3320 Jacombs Rd · Structube Langley · Costco Surrey and Langley.</span>
+    <span>Prices were checked online on Nov 8, 2026, and some listings may be cached. Confirm the price, colour and dimensions on each product page before you buy. The room size is estimated from photos.</span>
+  </div>
+</div>
+
+<script>
+(function(){
+  const NS="http://www.w3.org/2000/svg";
+  const W=14, D=17; // estimated room, feet
+  function el(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
+  function text(g,x,y,str,cls,anchor){const t=el("text",{x,y,class:cls,"text-anchor":anchor||"middle","dominant-baseline":"middle"},g);t.textContent=str;return t}
+  // seat: x,y,w,h in ft; face = direction the sitter looks (n,s,e,w); back drawn on the opposite side
+  function seat(g,s){
+    const {x,y,w,h,face,cls,label,arms}=s;
+    el("rect",{x,y,width:w,height:h,rx:.25,class:cls},g);
+    const b=.5;
+    let br;
+    if(face==="n")br=[x,y+h-b,w,b];
+    if(face==="s")br=[x,y,w,b];
+    if(face==="e")br=[x,y,b,h];
+    if(face==="w")br=[x+w-b,y,b,h];
+    el("rect",{x:br[0],y:br[1],width:br[2],height:br[3],rx:.15,class:"p-back"},g);
+    if(arms){
+      const a=.45;
+      if(face==="n"||face==="s"){el("rect",{x,y,width:a,height:h,rx:.15,class:"p-back"},g);el("rect",{x:x+w-a,y,width:a,height:h,rx:.15,class:"p-back"},g)}
+      else{el("rect",{x,y,width:w,height:a,rx:.15,class:"p-back"},g);el("rect",{x,y:y+h-a,width:w,height:a,rx:.15,class:"p-back"},g)}
+    }
+    if(label){
+      const vertical=(face==="e"||face==="w")&&h>w*1.4;
+      const cx=x+w/2,cy=y+h/2;
+      const t=text(g,cx,cy,label,cls==="p-sofa"?"p-label-sofa":"p-label-in");
+      if(vertical)t.setAttribute("transform",`rotate(-90 ${cx} ${cy})`);
+    }
+  }
+  function base(id,opt){
+    const host=document.getElementById(id);
+    const svg=el("svg",{viewBox:"-2.2 -2.1 18.4 21.4",xmlns:NS});
+    const defs=el("defs",{},svg);
+    const m=el("marker",{id:"arr",viewBox:"0 0 10 10",refX:"6",refY:"5",markerWidth:"5",markerHeight:"5",orient:"auto-start-reverse"},defs);
+    el("path",{d:"M0 0 L10 5 L0 10 z",class:"p-arrowhead"},m);
+    el("rect",{x:0,y:0,width:W,height:D,class:"p-floor"},svg);
+    const g=el("g",{},svg);
+    // plants along window wall
+    const plantEnd=opt.plantEnd||14.5;
+    [[1,.9,1.1],[.9,2.6,.8],[1.1,4.2,.9],[.8,5.8,.7],[1.0,7.2,.8],[.8,8.7,.7],[1.0,10.2,.8],[.9,11.8,.8],[1,13.4,.9]].forEach(p=>{if(p[1]<plantEnd)el("circle",{cx:p[0],cy:p[1],r:p[2],class:"p-plant"},g)});
+    el("circle",{cx:12.9,cy:1.1,r:1.1,class:"p-plant"},g); // fiddle leaf & plants by fireplace corner
+    // walls
+    el("path",{d:`M0 ${D} L0 0 L${W} 0 L${W} ${D}`,class:"p-wall"},g);
+    el("line",{x1:0,y1:D,x2:W,y2:D,class:"p-open"},g);
+    el("line",{x1:0,y1:3.4,x2:0,y2:11.6,class:"p-window"},g);
+    // fireplace
+    el("rect",{x:4.6,y:0,width:4.8,height:.9,class:"p-fire"},g);
+    el("rect",{x:5.2,y:.9,width:3.6,height:.6,class:"p-hearth"},g);
+    // pillar
+    el("rect",{x:13.45,y:16.45,width:.55,height:.55,class:"p-pillar"},g);
+    // labels outside
+    text(svg,7,-1.15,"FIREPLACE WALL","p-label");
+    text(svg,7,D+1.1,"OPEN TO ENTRY / HALLWAY","p-label");
+    const wl=text(svg,-1.15,7.5,"WINDOW + PLANTS","p-label");wl.setAttribute("transform","rotate(-90 -1.15 7.5)");
+    const el2=text(svg,W+1.15,8.5,"LAMP WALL","p-label");el2.setAttribute("transform","rotate(90 15.15 8.5)");
+    // dims
+    text(svg,7,-.45,"≈ 14 ft","p-dim");
+    host.appendChild(svg);
+    return {svg,g};
+  }
+  function lamp(g,y){el("rect",{x:12.75,y,width:1.1,height:1.1,rx:.15,class:"p-lamp"},g);el("circle",{cx:13.3,cy:y+.55,r:.32,class:"p-lamp"},g)}
+  function walk(g,d){el("path",{d,class:"p-walk"},g)}
+
+  // ---- Layout A ----
+  (function(){
+    const {g}=base("plan-a",{});
+    el("rect",{x:3.6,y:3.4,width:8,height:10,rx:.15,class:"p-rug-new"},g);
+    text(g,7.6,12.9,"8×10 rug (optional)","p-label-in");
+    lamp(g,3.3); lamp(g,12.0);
+    seat(g,{x:11,y:4.65,w:3,h:7.1,face:"w",cls:"p-sofa",label:"SOFA ≈ 7 ft",arms:true});
+    el("rect",{x:6.9,y:6.2,width:2.2,height:4.2,rx:.12,class:"p-table"},g);
+    seat(g,{x:2.7,y:5.0,w:2.3,h:2.3,face:"e",cls:"p-wicker",label:"wicker"});
+    seat(g,{x:2.7,y:9.1,w:2.3,h:2.3,face:"e",cls:"p-wicker",label:"wicker"});
+    seat(g,{x:4.8,y:13.7,w:2.3,h:2.3,face:"n",cls:"p-chair",label:"velvet"});
+    seat(g,{x:8.3,y:13.7,w:2.3,h:2.3,face:"n",cls:"p-chair",label:"velvet"});
+    el("circle",{cx:7.7,cy:14.9,r:.5,class:"p-lamp"},g);
+    el("circle",{cx:13.1,cy:14.4,r:.75,class:"p-plant"},g);
+    walk(g,"M13 18.4 C12 16.4 11.5 15 11.8 13.6");
+  })();
+
+  // ---- Layout B ----
+  (function(){
+    const {g}=base("plan-b",{});
+    el("rect",{x:2.1,y:3.2,width:10,height:8,rx:.15,class:"p-rug-new"},g);
+    lamp(g,3.0); lamp(g,9.6);
+    el("rect",{x:4.9,y:6.0,width:4.2,height:2.2,rx:.12,class:"p-table"},g);
+    seat(g,{x:3.5,y:9.6,w:7,h:3.1,face:"n",cls:"p-sofa",label:"SOFA ≈ 7–7.5 ft",arms:true});
+    el("rect",{x:4.2,y:12.85,width:5.6,height:.9,class:"p-console"},g);
+    text(g,7,14.35,"slim console (optional)","p-label-in");
+    seat(g,{x:2.5,y:4.0,w:2.2,h:2.2,face:"e",cls:"p-wicker",label:"wicker"});
+    seat(g,{x:2.5,y:6.9,w:2.2,h:2.2,face:"e",cls:"p-wicker",label:"wicker"});
+    seat(g,{x:9.6,y:4.0,w:2.2,h:2.2,face:"w",cls:"p-chair",label:"velvet"});
+    seat(g,{x:9.6,y:6.9,w:2.2,h:2.2,face:"w",cls:"p-chair",label:"velvet"});
+    el("circle",{cx:13.1,cy:13.0,r:.8,class:"p-plant"},g);
+    walk(g,"M13 18.4 C11 16.5 6 16.3 2.2 16.4");
+    text(g,7,15.2,"≈ 3 ft walkway","p-label-in");
+  })();
+
+  // ---- Layout C ----
+  (function(){
+    const {g}=base("plan-c",{plantEnd:12.5});
+    el("rect",{x:5.8,y:4.3,width:5.3,height:8,rx:.15,class:"p-rug"},g);
+    text(g,8.45,11.8,"current 5×8 rug","p-label-in");
+    lamp(g,3.6); lamp(g,11.9);
+    seat(g,{x:11,y:5.3,w:3,h:5.9,face:"w",cls:"p-sofa",label:"LOVESEAT",arms:true});
+    el("rect",{x:7.4,y:6.2,width:2.2,height:4.2,rx:.12,class:"p-table"},g);
+    seat(g,{x:4.4,y:5.4,w:2.3,h:2.3,face:"e",cls:"p-chair",label:"velvet"});
+    seat(g,{x:4.4,y:8.9,w:2.3,h:2.3,face:"e",cls:"p-chair",label:"velvet"});
+    // nook
+    seat(g,{x:.5,y:13.6,w:2.2,h:2.2,face:"e",cls:"p-wicker",label:"wicker"});
+    el("circle",{cx:3.7,cy:14.7,r:.75,class:"p-lamp"},g);
+    seat(g,{x:4.7,y:13.6,w:2.2,h:2.2,face:"w",cls:"p-wicker",label:"wicker"});
+    text(g,3.7,16.35,"tea + plant nook","p-label-in");
+    walk(g,"M13 18.4 C12 16 10.8 14.5 10.6 12.6");
+  })();
+})();
+</script>
